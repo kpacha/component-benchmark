@@ -25,18 +25,5 @@ class ResponseTimeDistribution extends ResponseTime
 EOD;
     }
 
-//    protected function getCommandOptions($name, $input, $output)
-//    {
-//        return <<<EOD
-//-e "set terminal pngcairo transparent enhanced font \"arial,10\" fontscale 1.0 size 500, 350; \
-//    set size 1,1; set grid y; set key left top; \
-//    set xlabel 'request'; set ylabel 'ms'; \
-//    set datafile separator '\t'; \
-//    set title \"Response time distribution\"; \
-//    set output '{$this->publicFolder}$output.sequence.png'; \
-//    plot \"$input\" using 5 with lines ;"
-//EOD;
-//    }
-
 }
 
