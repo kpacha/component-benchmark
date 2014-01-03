@@ -16,7 +16,7 @@ class AbTest extends \PHPUnit_Framework_TestCase
     const DUMMY_COMMAND_PATH = 'path/to/command';
     const SAMPLE_OUTPUT = 'Requests per second:    24.99';
 
-    private static $emptyResult = array('output' => array(), 'status' => 0);
+    private static $dummyResult = array('output' => array('output'), 'status' => 0);
     private $subject;
 
     /**
@@ -28,7 +28,7 @@ class AbTest extends \PHPUnit_Framework_TestCase
      */
     public function testCommandIsPassedToExec($expectedCommand, $arguments, $target)
     {
-        $this->createStubs(array(self::DUMMY_COMMAND_PATH, $arguments), $expectedCommand, self::$emptyResult,
+        $this->createStubs(array(self::DUMMY_COMMAND_PATH, $arguments), $expectedCommand, self::$dummyResult,
                 self::SAMPLE_OUTPUT);
         $this->subject->run($target);
     }
@@ -67,7 +67,7 @@ Transfer rate:          13.89 [Kbytes/sec] received
 
 Connection Times (ms)
 TEXT;
-        $this->createStubs(array(''), '', self::$emptyResult, $rawOutput);
+        $this->createStubs(array(''), '', self::$dummyResult, $rawOutput);
         $this->subject->run($target);
         $this->assertEquals(array($target => $expected), $this->subject->getOutput());
     }
@@ -76,9 +76,8 @@ TEXT;
     {
         $expected = 16.88;
         $target = 'someTarget';
-        $hashed = md5($target);
         $this->createMock(array('exec'), array('', array('logPath' => __DIR__ . "/../../../../resources/")));
-        $this->stubExecMethod(self::$emptyResult);
+        $this->stubExecMethod(self::$dummyResult);
         $this->subject->run($target);
         $this->assertEquals(array($target => $expected), $this->subject->getOutput());
     }
@@ -90,7 +89,7 @@ TEXT;
     public function testReadLogThrowsExceptionWhenNoLog()
     {
         $this->createMock(array('exec'), array('', array('logPath' => '/unknown/path/to/ab/log/')));
-        $this->stubExecMethod(self::$emptyResult);
+        $this->stubExecMethod(self::$dummyResult);
         $this->subject->run('someTarget');
         $this->subject->getOutput();
     }
