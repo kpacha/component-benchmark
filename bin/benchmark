@@ -1,0 +1,36 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../config/config.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Kpacha\ComponentBenchmark\Benchmarker\Ab;
+use Kpacha\ComponentBenchmark\BenchmarkRunner;
+use Kpacha\ComponentBenchmark\Helper\FinderFactory;
+use Kpacha\ComponentBenchmark\Printer\ConsolePrinter;
+use Kpacha\ComponentBenchmark\Printer\HtmlPrinter;
+use Kpacha\ComponentBenchmark\Processor\ResponseTime;
+use Kpacha\ComponentBenchmark\Processor\ResponseTimeDistribution;
+use Kpacha\ComponentBenchmark\Processor\HeatMap;
+
+$finderFactory = new FinderFactory;
+
+$benchmarkers = array(
+    new Ab($config['ab']['path'], $config['ab']['arguments'])
+);
+
+$printers = array(
+    new ConsolePrinter,
+    new HtmlPrinter($finderFactory, $config['html'])
+);
+
+$processors = array(
+    new ResponseTime($finderFactory, $config['gnuplot']),
+    new ResponseTimeDistribution($finderFactory, $config['gnuplot']),
+    new HeatMap($finderFactory, $config['gnuplot'])
+);
+
+$benchmark = new BenchmarkRunner('demo', $benchmarkers, $config['targets'], $processors, $printers, $config['global']['wait']);
+
+$results = $benchmark->run();
+$benchmark->processResults();
+echo "\n{$benchmark->printResults()}\n";

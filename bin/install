@@ -1,0 +1,18 @@
+#!/bin/bash          
+
+echo ""
+echo "-- PHP COMPONENT BENCHMARK INSTALLATION --"
+echo ""
+
+cd ..
+curl -sS https://getcomposer.org/installer | php
+php composer.phar install
+php composer.phar dump-autoload -o
+
+mkdir -p build/ab
+
+echo ""
+echo "-- DONE --"
+echo ""
+echo "Edit your 'config/config.php' and run 'bin/benchmark' to start"
+echo ""
