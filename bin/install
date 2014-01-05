@@ -4,15 +4,24 @@ echo ""
 echo "-- PHP COMPONENT BENCHMARK INSTALLATION --"
 echo ""
 
-cd ..
 curl -sS https://getcomposer.org/installer | php
-php composer.phar install
-php composer.phar dump-autoload -o
+php composer.phar install -o
 
-mkdir -p build/ab
+# check if the required utils are intsalled
+check() {
+if ! type "$@" > /dev/null; then
+  echo Please install $@
+  exit 1
+fi
+echo " -  $@ is installed!"
+}
+
+echo Checking if the required utils are intsalled...
+check "ab"
+check "gnuplot"
 
 echo ""
 echo "-- DONE --"
 echo ""
-echo "Edit your 'config/config.php' and run 'bin/benchmark' to start"
+echo "Edit your 'config/config.php' and run 'bin/console' to start"
 echo ""
