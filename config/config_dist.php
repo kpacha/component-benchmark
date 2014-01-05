@@ -20,12 +20,13 @@ $config['ab'] = array(
 $config['gnuplot'] = array(
     'path' => '/usr/bin/gnuplot',
     'logPath' => $config['global']['logPath'],
-    'publicPath' => $config['global']['publicPath']
+    'outputPath' => $config['global']['publicPath']
 );
 
 $config['html'] = array(
+    'templatePath' => __DIR__ . '/../vendor/kpacha/php-benchmark-tool/resources/twig',
     'logPath' => $config['global']['logPath'],
-    'publicPath' => $config['global']['publicPath']
+    'outputPath' => $config['global']['publicPath']
 );
 
 $config['targets'] = array(
