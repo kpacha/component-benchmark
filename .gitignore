@@ -3,3 +3,7 @@ build/
 composer.phar
 phpunit.xml
 config/config.php
+bin/console
+bin/coveralls
+bin/phpcs
+bin/phpunit
