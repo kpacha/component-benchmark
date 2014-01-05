@@ -7,3 +7,4 @@ bin/console
 bin/coveralls
 bin/phpcs
 bin/phpunit
+public/report
