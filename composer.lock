@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "96de11dfc06e9cf9841df466a6bf7e34",
+    "hash": "44ee79732834675b3af846c95133999b",
     "packages": [
         {
             "name": "fuel/validation",
@@ -672,16 +672,16 @@
         },
         {
             "name": "kpacha/php-benchmark-tool",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kpacha/php-benchmark-tool.git",
-                "reference": "4234a6ff2172a5662a12b5cdb264ba1ea4ec7d6a"
+                "reference": "a97aa3263b0aad4ef5aa61cdb1f1542c4298616f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kpacha/php-benchmark-tool/zipball/4234a6ff2172a5662a12b5cdb264ba1ea4ec7d6a",
-                "reference": "4234a6ff2172a5662a12b5cdb264ba1ea4ec7d6a",
+                "url": "https://api.github.com/repos/kpacha/php-benchmark-tool/zipball/a97aa3263b0aad4ef5aa61cdb1f1542c4298616f",
+                "reference": "a97aa3263b0aad4ef5aa61cdb1f1542c4298616f",
                 "shasum": ""
             },
             "require": {
@@ -722,10 +722,10 @@
             ],
             "description": "PHP Benchmarking Tool",
             "support": {
-                "source": "https://github.com/kpacha/php-benchmark-tool/tree/master",
+                "source": "https://github.com/kpacha/php-benchmark-tool/tree/HEAD",
                 "issues": "https://github.com/kpacha/php-benchmark-tool/issues"
             },
-            "time": "2014-01-05 15:20:55"
+            "time": "2014-01-05 15:30:30"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1717,8 +1717,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "fuel/validation": 20,
-        "satooshi/php-coveralls": 20,
-        "kpacha/php-benchmark-tool": 20
+        "satooshi/php-coveralls": 20
     },
     "platform": [
 
