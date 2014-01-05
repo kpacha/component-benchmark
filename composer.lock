@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "51ea7f004414ab49bcb77de9abc5c858",
+    "hash": "96de11dfc06e9cf9841df466a6bf7e34",
     "packages": [
         {
             "name": "fuel/validation",
@@ -676,12 +676,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kpacha/php-benchmark-tool.git",
-                "reference": "4894411235c526647b54e9e62e7fdec913299618"
+                "reference": "4234a6ff2172a5662a12b5cdb264ba1ea4ec7d6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kpacha/php-benchmark-tool/zipball/4894411235c526647b54e9e62e7fdec913299618",
-                "reference": "4894411235c526647b54e9e62e7fdec913299618",
+                "url": "https://api.github.com/repos/kpacha/php-benchmark-tool/zipball/4234a6ff2172a5662a12b5cdb264ba1ea4ec7d6a",
+                "reference": "4234a6ff2172a5662a12b5cdb264ba1ea4ec7d6a",
                 "shasum": ""
             },
             "require": {
@@ -708,7 +708,7 @@
             "scripts": {
                 "post-install-cmd": [
                     "mkdir -p build/ab",
-                    "mkdir -p public/reports"
+                    "mkdir -p public/report"
                 ]
             },
             "license": [
@@ -725,7 +725,7 @@
                 "source": "https://github.com/kpacha/php-benchmark-tool/tree/master",
                 "issues": "https://github.com/kpacha/php-benchmark-tool/issues"
             },
-            "time": "2014-01-05 02:52:34"
+            "time": "2014-01-05 15:20:55"
         },
         {
             "name": "phpunit/php-code-coverage",

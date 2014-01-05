@@ -30,7 +30,7 @@
         "bin-dir": "bin"
     },
     "scripts": {
-        "post-install-cmd": ["mkdir -p build/ab", "mkdir -p public/reports"]
+        "post-install-cmd": ["mkdir -p build/ab", "mkdir -p public/report"]
     },
     "autoload": {
         "psr-0": {
