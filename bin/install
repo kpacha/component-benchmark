@@ -7,18 +7,32 @@ echo ""
 curl -sS https://getcomposer.org/installer | php
 php composer.phar install -o
 
+detectAndInstall() {
+# detect the installation package
+YUM_CMD=$(which yum)
+APT_GET_CMD=$(which apt-get)
+if [[ ! -z $YUM_CMD ]]; then
+  yum install $1
+elif [[ ! -z $APT_GET_CMD ]]; then
+  apt-get install $2
+else
+  echo "error can't install package $@"
+  exit 1;
+fi
+}
+
 # check if the required utils are intsalled
 check() {
-if ! type "$@" > /dev/null; then
-  echo Please install $@
-  exit 1
+if ! type "$1" > /dev/null; then
+  echo Installing $1. Please wait
+  detectAndInstall $2 $3
 fi
-echo " -  $@ is installed!"
+echo " -  $1 is installed!"
 }
 
 echo Checking if the required utils are intsalled...
-check "ab"
-check "gnuplot"
+check "ab" "http-tools" "apache2-utils"
+check "gnuplot" "gnuplot" "gnuplot"
 
 echo ""
 echo "-- DONE --"
