@@ -40,7 +40,7 @@ abstract class AbstractTest extends \PHPUnit_Framework_TestCase
             'KoInteger' => array(new DummySubjects\KoInteger, 1),
             'KoLong' => array(new DummySubjects\KoLong, 1),
             'KoNegative' => array(new DummySubjects\KoNegative, 1),
-//            'KoNumber' => array(new DummySubjects\KoNumber, 1),
+            'KoNumber' => array(new DummySubjects\KoNumber, 1),
             'KoShort' => array(new DummySubjects\KoShort, 1),
             'KoString' => array(new DummySubjects\KoString, 1),
             'OkSubject' => array(new DummySubjects\OkSubject, 0),

@@ -1,7 +1,7 @@
 <?php
 
 $subjects = Kpacha\ComponentBenchmark\Dummy\ValidationSubjectBuilder::getSubjects(
-                array("KoBoolean", "KoCreditCard", "KoNumber")
+                array("KoBoolean", "KoCreditCard")
 );
 
 foreach ($validators as $validator) {
