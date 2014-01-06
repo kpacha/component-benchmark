@@ -11,7 +11,7 @@
     "require": {
 	"symfony/class-loader": "*",
         "zendframework/zend-loader": "*",
-        "fuel/validation":  "dev-master",
+        "fuelphp/validation":  "dev-master",
         "hybridlogic/validation": "*",
 	"respect/validation": "*",
 	"symfony/validator": "*",

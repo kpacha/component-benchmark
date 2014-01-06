@@ -3,42 +3,50 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "44ee79732834675b3af846c95133999b",
+    "hash": "43ad898a47a14988a973cdeecdf11056",
     "packages": [
         {
-            "name": "fuel/validation",
+            "name": "fuelphp/validation",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fuelphp-storage/validation.git",
-                "reference": "d074ad662a3d110c0e3bc8cd35896d4728be1bd4"
+                "url": "https://github.com/fuelphp/validation.git",
+                "reference": "b7dd9f3b2bc924104fb95ee96fb2924171938f8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp-storage/validation/zipball/d074ad662a3d110c0e3bc8cd35896d4728be1bd4",
-                "reference": "d074ad662a3d110c0e3bc8cd35896d4728be1bd4",
+                "url": "https://api.github.com/repos/fuelphp/validation/zipball/b7dd9f3b2bc924104fb95ee96fb2924171938f8d",
+                "reference": "b7dd9f3b2bc924104fb95ee96fb2924171938f8d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.7.*"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Fuel\\Validation": "classes/"
+                    "Fuel\\Validation": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Framework independent Validation library.",
-            "homepage": "http://fuelphp.com/",
-            "keywords": [
-                "validation",
-                "validator"
+            "authors": [
+                {
+                    "name": "FuelPHP Development Team",
+                    "email": "team@fuelphp.com"
+                }
             ],
-            "time": "2012-11-30 06:01:48"
+            "description": ".",
+            "homepage": "https://github.com/fuelphp/validation",
+            "keywords": [
+                "validation"
+            ],
+            "time": "2013-12-21 16:16:27"
         },
         {
             "name": "hybridlogic/validation",
@@ -1716,7 +1724,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "fuel/validation": 20,
+        "fuelphp/validation": 20,
         "satooshi/php-coveralls": 20
     },
     "platform": [
