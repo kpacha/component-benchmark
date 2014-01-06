@@ -9,8 +9,8 @@ before_script:
 
 script:
     - mkdir -p build/logs
-    - vendor/bin/phpunit -c phpunit.xml.dist
+    - bin/phpunit -c phpunit.xml.dist
 
 after_script:
-    - vendor/bin/phpcs -v --report=summary --standard=PSR1,PSR2 src/ tests/
-    - php vendor/bin/coveralls -v
+    - bin/phpcs -v --report=summary --standard=PSR1,PSR2 src/ tests/
+    - php bin/coveralls -v
