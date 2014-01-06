@@ -2,50 +2,42 @@
 
 namespace Kpacha\ComponentBenchmark\Validation;
 
-use Fuel\Validation\Base as FuelBase;
+use Fuel\Validation\Validator as FuelValidator;
 
 /**
  * Description of Fuel
  *
  * @author Kpacha <kpacha666@gmail.com>
  */
-class Fuel implements ValidationBenchmark
+class Fuel extends ValidationBenchmark
 {
 
     private $validator;
 
     public function init()
     {
-        $this->validator = new FuelBase;
+        $this->validator = new FuelValidator;
 
-        $this->validator->validate('name', function($v) {
-                    return $v->require();
-                });
-        $this->validator->validate('email', function($v) {
-                    return $v->isEmail();
-                });
-        $this->validator->validate('description',
-                function($v) {
-                    return $v->atLeastChars(5)
-                            and $v->atMostChars(50);
-                });
-        $this->validator->validate('age',
-                function($v) {
-                    return $v->atLeastNum(0)
-                            and $v->atMostNum(100);
-                });
+        $this->validator->addField('name', 'The user name')->required()->regex(self::ALPHA_REGEX);
+        $this->validator->addField('email', 'Email Address')->required()->email();
+        $this->validator->addField('description', 'A not too long text')->required()->minLength(5)->maxLength(50);
+        $this->validator->addField('age', 'The user age')->required()->numericBetween(0,100);
+        $this->validator->addField('nick', 'The user nick')->required()->regex(self::ALNUM_REGEX);
+        $this->validator->addField('accountBalance', 'The user account balance')->required()->number();
+        $this->validator->addField('views', 'Total views')->required()->number();
     }
 
     public function run(array $targets)
     {
-        foreach ($targets as $name => $subject) {
+        $errors = array();
+        foreach ($targets as $subject) {
             $this->init();
-            if (!$this->validator->execute((array) $subject)) {
-                foreach ((array) $this->validator->getError() as $message) {
-                    echo "$name $message\n";
-                }
+            $result = $this->validator->run((array) $subject);
+            if (!$result->isValid()) {
+                $errors[] = $result->getErrors();
             }
         }
+        return $errors;
     }
 
 }

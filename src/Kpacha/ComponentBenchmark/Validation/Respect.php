@@ -9,7 +9,7 @@ use Respect\Validation\Validator as v;
  *
  * @author Kpacha <kpacha666@gmail.com>
  */
-class Respect implements ValidationBenchmark
+class Respect extends ValidationBenchmark
 {
 
     private $validator;
@@ -19,19 +19,26 @@ class Respect implements ValidationBenchmark
         $this->validator = v::attribute('name', v::string()->notEmpty())
                 ->attribute('email', v::email())
                 ->attribute('description', v::string()->length(5, 50))
-                ->attribute('age', v::numeric()->between(0, 100));
+                ->attribute('age', v::callback('is_int')->between(0, 100))
+                ->attribute('nick', v::string()->alnum()->noWhitespace())
+                ->attribute('creditCard', v::numeric()->creditCard())
+                ->attribute('accountBalance', v::float())
+                ->attribute('banned', v::bool())
+                ->attribute('views', v::callback('is_int')->positive());
     }
 
     public function run(array $targets)
     {
-        foreach ($targets as $name => $subject) {
-            $this->init();
+        $this->init();
+        $errors = array();
+        foreach ($targets as $subject) {
             try {
                 $this->validator->assert($subject);
             } catch (\InvalidArgumentException $e) {
-                echo "$name {$e->getFullMessage()}\n";
+                $errors[] = $e->getFullMessage();
             }
         }
+        return $errors;
     }
 
 }

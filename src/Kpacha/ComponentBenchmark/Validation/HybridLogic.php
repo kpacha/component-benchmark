@@ -10,7 +10,7 @@ use HybridLogic\Validation\Rule;
  *
  * @author Kpacha <kpacha666@gmail.com>
  */
-class HybridLogic implements ValidationBenchmark
+class HybridLogic extends ValidationBenchmark
 {
 
     private $validator;
@@ -20,25 +20,28 @@ class HybridLogic implements ValidationBenchmark
         $this->validator = new HybridLogicValidator();
         $this->validator
                 ->add_rule('name', new Rule\NotEmpty)
+                ->add_rule('name', new Rule\Regex(self::ALPHA_REGEX))
                 ->add_rule('email', new Rule\NotEmpty)
                 ->add_rule('email', new Rule\Email)
                 ->add_rule('description', new Rule\MinLength(5))
                 ->add_rule('description', new Rule\MaxLength(50))
-                ->add_rule('age', new Rule\NumMax(100))
-                ->add_rule('age', new Rule\NumMin(0))
+                ->add_rule('age', new Rule\NumRange(0, 100))
+                ->add_rule('nick', new Rule\AlphaNumeric)
+                ->add_rule('accountBalance', new Rule\Number)
+                ->add_rule('views', new Rule\NumNatural)
         ;
     }
 
     public function run(array $targets)
     {
-        foreach ($targets as $name => $subject) {
+        $errors = array();
+        foreach ($targets as $subject) {
             $this->init();
             if (!$this->validator->is_valid((array) $subject)) {
-                foreach ($this->validator->get_errors() as $message) {
-                    echo "$name $message\n";
-                }
+                $errors[] = $this->validator->get_errors();
             }
         }
+        return $errors;
     }
 
 }
