@@ -11,10 +11,12 @@ $loader->addPrefixes(array(
     'Symfony\\Component\\PropertyAccess' => __DIR__ . '/../../vendor/symfony/property-access',
     'Symfony\\Component\\Translation' => __DIR__ . '/../../vendor/symfony/translation',
     'HybridLogic' => __DIR__ . '/../../vendor/hybridlogic/validation/src',
-    'Fuel' => __DIR__ . '/../../vendor/fuel/validation/classes',
+    'Fuel' => __DIR__ . '/../../vendor/fuelphp/validation/src',
     'Zend\\Validator' => __DIR__ . '/../../vendor/zendframework/zend-validator',
     'Zend\\Stdlib' => __DIR__ . '/../../vendor/zendframework/zend-stdlib',
     'Kpacha\\ComponentBenchmark' => __DIR__ . '/../../src',
+    'Kpacha\\BenchmarkTool' => __DIR__ . '/../../vendor/kpacha/php-benchmark-tool/src',
+    'Symfony\\Component\\Finder' => __DIR__ . '/../../vendor/symfony/finder'
 ));
 $loader->register();
 
