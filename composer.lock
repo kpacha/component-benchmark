@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "43ad898a47a14988a973cdeecdf11056",
+    "hash": "4ce216e0ac2d0b06e66fcb03083832ab",
     "packages": [
         {
             "name": "fuelphp/validation",
@@ -680,16 +680,16 @@
         },
         {
             "name": "kpacha/php-benchmark-tool",
-            "version": "v0.1.0",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kpacha/php-benchmark-tool.git",
-                "reference": "a97aa3263b0aad4ef5aa61cdb1f1542c4298616f"
+                "reference": "0bdcabe71c05d82a6f238dd04382b4ef2330810c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kpacha/php-benchmark-tool/zipball/a97aa3263b0aad4ef5aa61cdb1f1542c4298616f",
-                "reference": "a97aa3263b0aad4ef5aa61cdb1f1542c4298616f",
+                "url": "https://api.github.com/repos/kpacha/php-benchmark-tool/zipball/0bdcabe71c05d82a6f238dd04382b4ef2330810c",
+                "reference": "0bdcabe71c05d82a6f238dd04382b4ef2330810c",
                 "shasum": ""
             },
             "require": {
@@ -730,10 +730,10 @@
             ],
             "description": "PHP Benchmarking Tool",
             "support": {
-                "source": "https://github.com/kpacha/php-benchmark-tool/tree/HEAD",
+                "source": "https://github.com/kpacha/php-benchmark-tool/tree/v0.1.1",
                 "issues": "https://github.com/kpacha/php-benchmark-tool/issues"
             },
-            "time": "2014-01-05 15:30:30"
+            "time": "2014-01-08 21:22:06"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1727,9 +1727,9 @@
         "fuelphp/validation": 20,
         "satooshi/php-coveralls": 20
     },
-    "platform": [
-
-    ],
+    "platform": {
+        "ext-phalcon": "*"
+    },
     "platform-dev": [
 
     ]
