@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4ce216e0ac2d0b06e66fcb03083832ab",
+    "hash": "c208eebaf15427a80cea911489803a88",
     "packages": [
         {
             "name": "fuelphp/validation",
@@ -680,16 +680,16 @@
         },
         {
             "name": "kpacha/php-benchmark-tool",
-            "version": "v0.1.1",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kpacha/php-benchmark-tool.git",
-                "reference": "0bdcabe71c05d82a6f238dd04382b4ef2330810c"
+                "reference": "71c73feadb01ba4c36d9df5ac947c07a7120c732"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kpacha/php-benchmark-tool/zipball/0bdcabe71c05d82a6f238dd04382b4ef2330810c",
-                "reference": "0bdcabe71c05d82a6f238dd04382b4ef2330810c",
+                "url": "https://api.github.com/repos/kpacha/php-benchmark-tool/zipball/71c73feadb01ba4c36d9df5ac947c07a7120c732",
+                "reference": "71c73feadb01ba4c36d9df5ac947c07a7120c732",
                 "shasum": ""
             },
             "require": {
@@ -713,12 +713,7 @@
                     "Kpacha\\Tests\\BenchmarkTool\\": "tests"
                 }
             },
-            "scripts": {
-                "post-install-cmd": [
-                    "mkdir -p build/ab",
-                    "mkdir -p public/report"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -729,11 +724,7 @@
                 }
             ],
             "description": "PHP Benchmarking Tool",
-            "support": {
-                "source": "https://github.com/kpacha/php-benchmark-tool/tree/v0.1.1",
-                "issues": "https://github.com/kpacha/php-benchmark-tool/issues"
-            },
-            "time": "2014-01-08 21:22:06"
+            "time": "2014-01-12 13:11:58"
         },
         {
             "name": "phpunit/php-code-coverage",
