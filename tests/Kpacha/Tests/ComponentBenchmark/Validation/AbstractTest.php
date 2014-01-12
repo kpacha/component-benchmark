@@ -32,7 +32,6 @@ abstract class AbstractTest extends \PHPUnit_Framework_TestCase
     {
         return array(
             'KoAlpha' => array(new DummySubjects\KoAlpha, 1),
-//            'KoBoolean' => array(new DummySubjects\KoBoolean, 1),
             'KoCreditCard' => array(new DummySubjects\KoCreditCard, 1),
             'KoEmail' => array(new DummySubjects\KoEmail, 1),
             'KoEmpty' => array(new DummySubjects\KoEmpty, 1),
@@ -40,7 +39,6 @@ abstract class AbstractTest extends \PHPUnit_Framework_TestCase
             'KoInteger' => array(new DummySubjects\KoInteger, 1),
             'KoLong' => array(new DummySubjects\KoLong, 1),
             'KoNegative' => array(new DummySubjects\KoNegative, 1),
-//            'KoNumber' => array(new DummySubjects\KoNumber, 1),
             'KoShort' => array(new DummySubjects\KoShort, 1),
             'KoString' => array(new DummySubjects\KoString, 1),
             'OkSubject' => array(new DummySubjects\OkSubject, 0),
