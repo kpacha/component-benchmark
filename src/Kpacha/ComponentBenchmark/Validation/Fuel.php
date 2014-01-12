@@ -21,7 +21,7 @@ class Fuel extends ValidationBenchmark
         $this->validator->addField('name', 'The user name')->required()->regex(self::ALPHA_REGEX);
         $this->validator->addField('email', 'Email Address')->required()->email();
         $this->validator->addField('description', 'A not too long text')->required()->minLength(5)->maxLength(50);
-        $this->validator->addField('age', 'The user age')->required()->numericBetween(0,100);
+        $this->validator->addField('age', 'The user age')->required()->numericBetween(0, 100);
         $this->validator->addField('nick', 'The user nick')->required()->regex(self::ALNUM_REGEX);
         $this->validator->addField('accountBalance', 'The user account balance')->required()->number();
         $this->validator->addField('views', 'Total views')->required()->number();
@@ -37,7 +37,7 @@ class Fuel extends ValidationBenchmark
                 $errors[] = $result->getErrors();
             }
         }
+
         return $errors;
     }
-
 }

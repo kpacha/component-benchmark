@@ -10,7 +10,7 @@ use Kpacha\ComponentBenchmark\Validation\Fuel;
  * @author Kpacha <kpacha666@gmail.com>
  */
 class FuelTest extends AbstractTest
-{    
+{
     public function setUp()
     {
         $this->setValidatorBenchmark(new Fuel);

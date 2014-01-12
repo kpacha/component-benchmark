@@ -13,5 +13,4 @@ class KoEmpty extends OkSubject
     {
         $this->name = null;
     }
-
 }

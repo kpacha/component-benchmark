@@ -10,7 +10,7 @@ use Kpacha\ComponentBenchmark\Validation\Respect;
  * @author Kpacha <kpacha666@gmail.com>
  */
 class RespectTest extends AbstractTest
-{    
+{
     public function setUp()
     {
         $this->setValidatorBenchmark(new Respect);

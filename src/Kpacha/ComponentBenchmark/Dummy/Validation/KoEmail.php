@@ -13,5 +13,4 @@ class KoEmail extends OkSubject
     {
         $this->email = 'rudolhp@nortpole';
     }
-
 }

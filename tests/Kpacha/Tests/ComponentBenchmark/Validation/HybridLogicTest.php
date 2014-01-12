@@ -10,7 +10,7 @@ use Kpacha\ComponentBenchmark\Validation\HybridLogic;
  * @author Kpacha <kpacha666@gmail.com>
  */
 class HybridLogicTest extends AbstractTest
-{    
+{
     public function setUp()
     {
         $this->setValidatorBenchmark(new HybridLogic);

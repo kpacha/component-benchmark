@@ -77,6 +77,7 @@ class ZF2 extends ValidationBenchmark
                 $errors[] = $this->getErrors();
             }
         }
+
         return $errors;
     }
 
@@ -89,6 +90,7 @@ class ZF2 extends ValidationBenchmark
                 }
             }
         }
+
         return !count($this->errors);
     }
 
@@ -103,5 +105,4 @@ class ZF2 extends ValidationBenchmark
     {
         return $this->errors;
     }
-
 }

@@ -9,8 +9,8 @@ use Kpacha\ComponentBenchmark\Validation\Symfony;
  *
  * @author Kpacha <kpacha666@gmail.com>
  */
-class SymfonytTest extends AbstractTest
-{    
+class SymfonyTest extends AbstractTest
+{
     public function setUp()
     {
         $this->setValidatorBenchmark(new Symfony);

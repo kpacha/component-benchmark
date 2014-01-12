@@ -10,7 +10,7 @@ use Kpacha\ComponentBenchmark\Validation\Phalcon;
  * @author Kpacha <kpacha666@gmail.com>
  */
 class PhalconTest extends AbstractTest
-{    
+{
     public function setUp()
     {
         $this->setValidatorBenchmark(new Phalcon);

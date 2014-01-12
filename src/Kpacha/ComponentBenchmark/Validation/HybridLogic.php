@@ -41,7 +41,7 @@ class HybridLogic extends ValidationBenchmark
                 $errors[] = $this->validator->get_errors();
             }
         }
+
         return $errors;
     }
-
 }

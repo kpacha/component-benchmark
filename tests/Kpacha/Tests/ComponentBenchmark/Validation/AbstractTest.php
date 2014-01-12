@@ -14,14 +14,14 @@ abstract class AbstractTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @var Kpacha\ComponentBenchmark\Validation\ValidationBenchmark 
+     * @var Kpacha\ComponentBenchmark\Validation\ValidationBenchmark
      */
     private $validatorBenchmark;
 
     /**
-     * @param mixed $subject
+     * @param mixed   $subject
      * @param boolean $expectedResult
-     * @dataProvider validationSubjectProvider
+     *                                @dataProvider validationSubjectProvider
      */
     public function testValidation($subject, $expectedCount)
     {
@@ -48,5 +48,4 @@ abstract class AbstractTest extends \PHPUnit_Framework_TestCase
     {
         $this->validatorBenchmark = $validatorBenchmark;
     }
-
 }

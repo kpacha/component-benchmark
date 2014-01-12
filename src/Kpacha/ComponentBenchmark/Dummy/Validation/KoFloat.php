@@ -13,5 +13,4 @@ class KoFloat extends OkSubject
     {
         $this->accountBalance = 'some balance';
     }
-
 }

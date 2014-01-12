@@ -13,5 +13,4 @@ class KoAlpha extends OkSubject
     {
         $this->name = 1225;
     }
-
 }

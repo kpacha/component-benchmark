@@ -88,7 +88,7 @@ class Symfony extends ValidationBenchmark
                 $errors[] = $violations;
             }
         }
+
         return $errors;
     }
-
 }

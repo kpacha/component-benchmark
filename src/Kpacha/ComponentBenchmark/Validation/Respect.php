@@ -38,7 +38,7 @@ class Respect extends ValidationBenchmark
                 $errors[] = $e->getFullMessage();
             }
         }
+
         return $errors;
     }
-
 }

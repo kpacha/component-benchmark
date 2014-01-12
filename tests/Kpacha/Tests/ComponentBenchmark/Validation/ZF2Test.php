@@ -10,7 +10,7 @@ use Kpacha\ComponentBenchmark\Validation\ZF2;
  * @author Kpacha <kpacha666@gmail.com>
  */
 class ZF2Test extends AbstractTest
-{    
+{
     public function setUp()
     {
         $this->setValidatorBenchmark(new ZF2);

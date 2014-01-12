@@ -13,7 +13,7 @@ abstract class ValidationBenchmark
     const INT_REGEX = '/^[\-0-9]+$/';
     const POSITIVE_INT_REGEX = '/^[\d]+$/';
     const FLOAT_REGEX = '/^[\-\.0-9]+$/';
-    
+
     abstract public function init();
     abstract public function run(array $targets);
 }

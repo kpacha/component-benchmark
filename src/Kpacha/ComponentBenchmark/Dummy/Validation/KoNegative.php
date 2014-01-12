@@ -13,5 +13,4 @@ class KoNegative extends OkSubject
     {
         $this->age = -33;
     }
-
 }

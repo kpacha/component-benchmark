@@ -13,5 +13,4 @@ class KoNumber extends OkSubject
     {
         $this->age = '99';
     }
-
 }

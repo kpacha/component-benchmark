@@ -13,5 +13,4 @@ class KoShort extends OkSubject
     {
         $this->description = 's';
     }
-
 }

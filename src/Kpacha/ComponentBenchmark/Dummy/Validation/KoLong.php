@@ -11,7 +11,9 @@ class KoLong extends OkSubject
 {
     public function __construct()
     {
-        $this->description = 'too long description. too long description. too long description. too long description. too long description. too long description. too long description. too long description. too long description. too long description. too long description. too long description. too long description.';
+        $this->description = 'too long description. too long description. too long description.'
+            . 'too long description. too long description. too long description. too long description. '
+            . 'too long description. too long description. too long description. too long description. '
+            . 'too long description. too long description.';
     }
-
 }

@@ -13,12 +13,13 @@ class ValidationSubjectBuilder
 {
 
     private static $finderFactory;
-    
+
     private static function getFinderFactory()
     {
-        if(!self::$finderFactory){
+        if (!self::$finderFactory) {
             self::$finderFactory = new FinderFactory;
         }
+
         return self::$finderFactory;
     }
 
@@ -30,16 +31,17 @@ class ValidationSubjectBuilder
             $fullClassName = 'Kpacha\ComponentBenchmark\Dummy\Validation\\' . $className;
             $subjects[$className] = new $fullClassName;
         }
+
         return $subjects;
     }
-    
+
     private static function getDummyFiles(array $excludedDummies)
     {
-       $finder = self::getFinderFactory()->create()->files()->in(__DIR__ . '/Validation')->name('*.php');
-        foreach($excludedDummies as $excludedDummy) {
+        $finder = self::getFinderFactory()->create()->files()->in(__DIR__ . '/Validation')->name('*.php');
+        foreach ($excludedDummies as $excludedDummy) {
             $finder->notName($excludedDummy . '.php');
         }
+
         return $finder;
     }
-
 }

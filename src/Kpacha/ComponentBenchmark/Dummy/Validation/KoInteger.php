@@ -13,5 +13,4 @@ class KoInteger extends OkSubject
     {
         $this->views = false;
     }
-
 }

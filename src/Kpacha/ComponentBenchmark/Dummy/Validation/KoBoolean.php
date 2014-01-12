@@ -13,5 +13,4 @@ class KoBoolean extends OkSubject
     {
         $this->banned = 'not banned';
     }
-
 }

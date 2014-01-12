@@ -13,5 +13,4 @@ class KoString extends OkSubject
     {
         $this->name = true;
     }
-
 }

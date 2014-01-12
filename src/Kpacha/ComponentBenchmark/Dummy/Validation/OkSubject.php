@@ -19,5 +19,4 @@ class OkSubject
     public $accountBalance = 109.78;
     public $banned = false;
     public $views = 265;
-
 }

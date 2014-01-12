@@ -13,5 +13,4 @@ class KoCreditCard extends OkSubject
     {
         $this->creditCard = '4929763080215205';
     }
-
 }
